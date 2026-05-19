@@ -19,3 +19,7 @@ uv add flask
 ```bash
 python init.py
 ```
+## 5. Ejecutar el proyecto
+```bash
+uv run flask --app app/. run --debug
+```

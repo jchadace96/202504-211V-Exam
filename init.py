@@ -31,6 +31,6 @@ def insert_student(dni, name, age, grade, is_approved):
     connection.commit()
     connection.close()
 
-insert_student("12345678", "Juan Perez", 20, 15.5, 1)
+insert_student("12345678", "Jean Huaman", 20, 15.5, 1)
 insert_student("87654321", "Maria Garcia", 22, 12.0, 0)
 insert_student("11223344", "Carlos Lopez", 19, 18.0, 1)
