@@ -1,6 +1,3 @@
-def main():
-    print("Hello from 202504-211v-exam!")
+from app import create_app
 
-
-if __name__ == "__main__":
-    main()
+app = create_app()

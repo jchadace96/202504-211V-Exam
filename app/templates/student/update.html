@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>Editar Estudiante</h2>
+        <form method="POST" action="/students/update/{{ student['id'] }}">
+            <div class="mb-3">
+                <label class="form-label">DNI</label>
+                <input type="text" class="form-control" name="dni" value="{{ student['dni'] }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" value="{{ student['name'] }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Edad</label>
+                <input type="number" class="form-control" name="age" value="{{ student['age'] }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nota</label>
+                <input type="number" step="0.1" class="form-control" name="grade" value="{{ student['grade'] }}">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" name="is_approved" id="is_approved"
+                    {{ 'checked' if student['is_approved'] else '' }}>
+                <label class="form-check-label" for="is_approved">Aprobado</label>
+            </div>
+            <button type="submit" class="btn btn-warning">Actualizar</button>
+            <a href="/students/" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

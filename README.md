@@ -14,3 +14,8 @@ uv add flask
 - Carpeta `app/`
 - Subcarpetas `routes/`, `static/`, `templates/`
 - Archivos base
+
+## 4. Crear base de datos
+```bash
+python init.py
+```
